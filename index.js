@@ -7,5 +7,14 @@ function printBadges(names) {
 }
 
 function tailsNeverFails() {
+  let tailsCounter = 0;
   
+  while (isTails()) {
+    tailsCounter++;
+  }
+  return `You got ${tailsCounter} tails in a row!`;
+}
+
+function isTails() {
+  return Math.random() >= 0.5;
 }
